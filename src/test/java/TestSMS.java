@@ -41,9 +41,9 @@ public class TestSMS {
         given().
                 header("Content-Type", "application/json").
                 body(FileUtils.readFileToString(requestBody, StandardCharsets.UTF_8)).
-                when().
+        when().
                 post("/SMS_ADVANCE").
-                then().
+        then().
                 statusCode(200).
                 body("outcome", equalTo("SUCCESS")).
                 body("terminateSession", equalTo("true")).
