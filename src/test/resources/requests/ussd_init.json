@@ -1,0 +1,36 @@
+{
+  "CUSTOMER_TCL": 20.0,
+  "APP_MIN_TENURE": 3,
+  "dialogueOffers": [
+    {
+      "offerTemplateId": 1,
+      "fee": "1",
+      "principal": "3"
+    },
+    {
+      "offerTemplateId": 2,
+      "fee": "1",
+      "principal": "5"
+    },
+    {
+      "offerTemplateId": 3,
+      "fee": "1",
+      "principal": "10"
+    }
+  ],
+  "APP_LAST_RECHARGE_THRESHOLD": 0,
+  "maxSize": 500000,
+  "VASP_OUTSTANDING_TOTAL": 0,
+  "newRequest": true,
+  "BALANCE": 0.0,
+  "AIRBALANCE": 643.0,
+  "eligibilityStatus": "ELIGIBLE",
+  "input": "1",
+  "CUSTOMER_ACL": 14.0,
+  "customerId": 2,
+  "langId": 41,
+  "msisdn": "26682980052",
+  "APP_MAX_BALANCE": 30,
+  "IN_ERROR": false,
+  "subscriberType": "PREPAID"
+}
