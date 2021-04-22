@@ -1,0 +1,25 @@
+{
+  "CUSTOMER_TCL": 0.0,
+  "APP_MIN_TENURE": 3,
+  "subscriberType": "PREPAID",
+  "maxSize": 500000,
+  "VASP_OUTSTANDING_TOTAL": 0.0,
+  "newRequest": true,
+  "BALANCE": 0.0,
+  "advanceOutcome": "SUCCESS",
+  "CUSTOMER_ACL": 0.0,
+  "customerId": 47,
+  "langId": 41,
+  "msisdn": "2669999995",
+  "parameters": [
+    {
+      "type": "requestedDialogueOffer",
+      "value": {
+        "offerTemplateId": 2,
+        "fee": "1",
+        "principal": "5"
+      }
+    }
+  ],
+  "APP_MAX_BALANCE": 30
+}

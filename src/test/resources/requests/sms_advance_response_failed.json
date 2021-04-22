@@ -1,0 +1,16 @@
+{
+  "CUSTOMER_TCL": 0.0,
+  "APP_MIN_TENURE": 3,
+  "subscriberType": "PREPAID",
+  "maxSize": 500000,
+  "VASP_OUTSTANDING_TOTAL": 0.0,
+  "newRequest": true,
+  "BALANCE": 0.0,
+  "advanceOutcome": "FAILURE",
+  "CUSTOMER_ACL": 0.0,
+  "customerId": 2,
+  "langId": 41,
+  "msisdn": "26682980052",
+  "failedCheckId": "NE_TCL_REACHED",
+  "APP_MAX_BALANCE": 30
+}
