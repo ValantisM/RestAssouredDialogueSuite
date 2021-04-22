@@ -26,9 +26,9 @@ public class USSDTest {
         given().
                 header("Content-Type", "application/json").
                 body(FileUtils.readFileToString(requestBody, StandardCharsets.UTF_8)).
-                when().
+        when().
                 post("/USSD_DIALOGUE").
-                then().
+        then().
                 statusCode(200).
                 body("outcome", equalTo("SUCCESS")).
                 body("terminateSession", equalTo("false")).
