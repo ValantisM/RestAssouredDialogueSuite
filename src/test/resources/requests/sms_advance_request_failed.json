@@ -1,0 +1,18 @@
+{
+  "CUSTOMER_TCL": 20.0,
+  "APP_MIN_TENURE": 3,
+  "subscriberType": "PREPAID",
+  "IN_ERROR": false,
+  "dialogueOffers": [],
+  "maxSize": 500000,
+  "VASP_OUTSTANDING_TOTAL": 6449.0,
+  "newRequest": true,
+  "BALANCE": 0.0,
+  "eligibilityStatus": "NE_TCL_REACHED",
+  "input": "M5",
+  "CUSTOMER_ACL": 14.0,
+  "customerId": 2,
+  "langId": 41,
+  "msisdn": "26682980052",
+  "APP_MAX_BALANCE": 30
+}
