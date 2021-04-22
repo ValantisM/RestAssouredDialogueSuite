@@ -1,3 +1,5 @@
+package test.dialogue;
+
 import io.restassured.RestAssured;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.BeforeTest;
@@ -8,9 +10,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-public class SMSTest {
+public class MTAdvanceTest {
 
     @BeforeTest
     public void environmentSetup() {
@@ -18,40 +20,37 @@ public class SMSTest {
     }
 
     @Test
-    public void smsSuccessfulAdvance() throws IOException {
+    public void successfulAdvance() throws IOException {
 
-        File requestBody = new File(Constants.REQUESTS_DIRECTORY + "/sms_advance_request_successful.json");
+        File requestBody = new File(Constants.REQUESTS_DIRECTORY + "/sms_advance_response_successful.json");
 
         given().
                 header("Content-Type", "application/json").
                 body(FileUtils.readFileToString(requestBody, StandardCharsets.UTF_8)).
         when().
-                post("/SMS_DIALOGUE").
+                post("/SMS_ADVANCE").
         then().
                 statusCode(200).
                 body("outcome", equalTo("SUCCESS")).
                 body("terminateSession", equalTo("true")).
-                body("callback.action", equalTo("advance")).
-                body("callback.params", notNullValue()).
-                body("actualResponse", equalTo(""));
+                body("actualResponse", equalTo("")); // value is project specific, not always an empty string
     }
 
     @Test
-    public void smsFailedAdvance() throws IOException {
+    public void failedAdvance() throws IOException {
 
-        File requestBody = new File(Constants.REQUESTS_DIRECTORY + "/sms_advance_request_failed.json");
+        File requestBody = new File(Constants.REQUESTS_DIRECTORY + "/sms_advance_response_failed.json");
 
         given().
                 header("Content-Type", "application/json").
                 body(FileUtils.readFileToString(requestBody, StandardCharsets.UTF_8)).
         when().
-                post("/SMS_DIALOGUE").
+                post("/SMS_ADVANCE").
         then().
                 statusCode(200).
                 body("outcome", equalTo("SUCCESS")).
                 body("terminateSession", equalTo("true")).
-                body("callback", nullValue()).
                 body("actualResponse", equalTo("Dear customer, please recharge to settle your outstanding " +
-                        "Airtime Advance of M6449 and be able to enjoy the service again.")); // the value is project specific
+                        "Airtime Advance and be able to enjoy the service again.")); // value is project specific
     }
 }
