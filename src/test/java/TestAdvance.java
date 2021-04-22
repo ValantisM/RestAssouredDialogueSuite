@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class TestSMS {
+public class TestAdvance {
 
     @BeforeTest
     public void environmentSetup() {
